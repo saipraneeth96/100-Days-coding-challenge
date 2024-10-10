@@ -1,13 +1,7 @@
-Practice Statement: 
-Write a program to print "Welcome to Talent Battle" on the output screen.
-
-print("Welcome to Talent Battle")
-
-
-
-
+"""
 Day 1 coding Statement: 
 Write a program to identify if the character is a vowel or consonant.
+"""
 
 # Function to check if an alphabet is vowel or consonant
 def check(alphabet):

@@ -1,5 +1,7 @@
+"""
 Day 3 coding Statement: 
 Write a program to find ASCII values of a character
+"""
 
 # Input the character
 char = input("Enter a character: ")

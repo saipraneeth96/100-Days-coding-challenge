@@ -1,6 +1,7 @@
+"""
 Day 4 coding Statement: 
 Write a program to identify if the a number is positive or negative
-
+"""
 
 # Input a number 'num'
 num = int(input("Enter a number: "))

@@ -1,5 +1,7 @@
+"""
 Day 10 coding Statement:
 Write a program to find Factorial of a number
+"""
 
 
 # Input a number 

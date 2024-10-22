@@ -1,5 +1,7 @@
+"""
 Day 13 coding Statement:
 Write a program to find Sum of N natural numbers
+"""
 
 
 # Input the limit of natural numbers

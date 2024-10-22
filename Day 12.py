@@ -1,5 +1,7 @@
+"""
 Day 12 coding Statement:
 Write a program to find Sum of digits of a number
+"""
 
 
 # Input a number

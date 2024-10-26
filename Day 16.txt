@@ -1,0 +1,18 @@
+Day 16 coding Statement:
+Write a program to identify if the number is Perfect number or not
+
+
+# input a number
+num = int(input("Enter a number: "))
+
+sum = 0
+
+# check for the factors of num and add it to sum
+for i in range(1, num):
+    if num % i == 0:
+        sum = sum + i
+        
+if sum == num:
+    print("Perfect number")
+else:
+    print("Not a perfect number")

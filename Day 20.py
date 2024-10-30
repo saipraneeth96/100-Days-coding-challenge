@@ -1,5 +1,7 @@
+"""
 Day 20 coding Statement:
 Write a program to identify if the number is Prime number or not
+"""
 
 
 # function to check if number is prime or not

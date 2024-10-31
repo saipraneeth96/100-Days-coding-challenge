@@ -1,5 +1,7 @@
+"""
 Day 21 coding Statement:
 Write a program to identify if the number is Palindrome or not
+"""
 
 
 # reverse the input number

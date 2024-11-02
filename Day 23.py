@@ -1,5 +1,7 @@
+"""
 Day 23 coding Statement:
 Write a program to Replace all 0’s with 1 in a given integer
+"""
 
 
 # input a number

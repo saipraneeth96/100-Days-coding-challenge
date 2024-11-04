@@ -1,3 +1,4 @@
+"""
 Day 24 coding Statement:
 Write a program to print Pyramid pattern using stars
 
@@ -16,6 +17,7 @@ Output
 *****
 *******
 
+"""
 
 # input number of steps in the pyramid
 num = int(input("Enter number of pyramid steps: "))

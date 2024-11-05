@@ -1,0 +1,12 @@
+Day 25 coding Statement:
+Write a program to find Area of a circle
+
+
+# input the radius of circle
+radius = float(input("Enter the radius of number: "))
+
+# calculing the area
+area = 3.14 * radius * radius
+
+# display the result
+print(round(area, 2))

@@ -1,0 +1,16 @@
+Day 26 coding Statement:
+Write a program to calculate Maximum number of handshakes
+
+
+# input number of people
+people = int(input("Number of people: "))
+
+# store handshakes in a variable
+handshakes = 0
+
+# calculating handshakes
+for i in range(people - 1, 0, -1):
+    handshakes += i
+    
+# Number of handshakes
+print(handshakes)

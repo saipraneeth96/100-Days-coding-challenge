@@ -1,5 +1,7 @@
+"""
 Day 30 coding Statement:
 Write a Program to print Length of the string without using strlen() function
+"""
 
 
 # input a string

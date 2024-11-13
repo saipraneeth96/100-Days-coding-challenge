@@ -1,0 +1,11 @@
+Day 31 coding Statement:
+Write a Program to Toggle each character in a string
+
+# Original string
+text = input("Enter a string: ")
+
+# Toggle the string
+new_text = text.swapcase()
+
+# display the result
+print(new_text)

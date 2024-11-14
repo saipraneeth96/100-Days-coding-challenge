@@ -1,5 +1,7 @@
+"""
 Day 33 coding Statement:
 Write a Program to check if String is a palindrome or not
+"""
 
 # input a string
 s = input("Enter a string: ").lower()

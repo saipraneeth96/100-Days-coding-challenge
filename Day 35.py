@@ -1,5 +1,7 @@
+"""
 Day 35 coding Statement:
 Write a Program to Count the sum of numbers in a string
+"""
 
 # input a string
 s = input("Enter a string: ")

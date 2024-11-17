@@ -1,5 +1,7 @@
+"""
 Day 36 coding Statement:
 Write a Program to Capitalize the first and last letter of each word of a string.
+"""
 
 # input a string
 text = input("Enter some text: ")

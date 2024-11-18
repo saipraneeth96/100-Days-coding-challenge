@@ -1,0 +1,22 @@
+Day 37 coding Statement:
+Write a Program to calculate the Frequency of characters in a string
+
+# input a string
+s = input("Enter s atring: ")
+
+# empty dictionary to store the frequency of each character
+freq = {}
+
+# calculate count of each character ad add to dictionary
+for char in s:
+    if char in freq:
+        freq[char] += 1
+    else:
+        freq[char] = 1
+        
+# Sort the dictionary by keys
+sorted_freq = dict(sorted(freq.items()))  
+     
+# display each item with its value        
+for key, value in sorted_freq.items():
+    print(f"The frequency of {key} in {value}")

@@ -3,7 +3,6 @@ Day 44 coding Statement:
 Write Program to find number of even and odd elements in an array
 """
 
-
 # input size of array
 n = int(input("Enter size of the array: "))
 

@@ -18,6 +18,7 @@ and similarly, everytime we find an element < mini,
 update mini with this element.
 """
 
+
 mini, maxi = arr[0], arr[0]
 
 for i in range(n):

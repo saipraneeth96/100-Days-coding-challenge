@@ -1,5 +1,7 @@
+"""
 Day 46 coding Statement:
 Write Program to find sum of elements in an array
+"""
 
 # input size of array
 n = int(input("Enter size of array: "))

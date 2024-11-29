@@ -18,3 +18,8 @@ for i in range(n):
     
 # display the output
 print(total)
+
+
+"""
+We can also use sum() function in python
+"""

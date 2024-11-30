@@ -1,5 +1,7 @@
+"""
 Day 48 coding Statement:
 Write Program to remove duplicate elements in an array
+"""
 
 
 # input size of the array

@@ -1,0 +1,21 @@
+Day 50 coding Statement:
+Given an integer array of size N. Write Program to find sum of positive square elements in the array.
+
+size = int(input("Enter size of the array: "))
+
+array = []
+# enter elements into array
+for i in range(size):
+    array.append(int(input()))
+    
+# square the elements of the array
+for i in range(len(array)):
+    array[i] = array[i]**2
+    
+# convert list to set to eliminate duplicates
+unique = set(array)
+
+# calculate summ of elements of this set
+total = sum(unique)
+
+print(total)

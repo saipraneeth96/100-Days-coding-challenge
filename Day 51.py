@@ -1,5 +1,7 @@
+"""
 Day 51 coding Statement:
 Given an integer array of size N, write a program to sort the array
+"""
 
 size = int(input("Enter size of the array: "))
 

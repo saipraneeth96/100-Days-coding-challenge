@@ -1,3 +1,4 @@
+"""
 Day 57 coding Statement :
 
 "Pass or Fail
@@ -12,6 +13,17 @@ Output Format
 For each test case output ""PASS"" if Chef passes the exam and ""FAIL"" if Chef fails the exam.
 You may print each character of the string in uppercase or lowercase (for example, the strings ""pAas"", ""pass"", ""Pass"" and ""PASS"" will all be treated as identical).
 
+
+Sample Input 1
+3
+5 2 3
+5 2 4
+4 0 0
+Sample Output 1
+PASS
+FAIL
+FAIL
+"""
 SOLUTION:
 
 # input number of test cases

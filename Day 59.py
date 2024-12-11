@@ -1,3 +1,4 @@
+"""
 Day 59 coding Statement:
 Body Mass Index
 
@@ -14,6 +15,7 @@ Category 3: Overweight if BMI ∈{25, 26,…, 29}
 Category 4: Obesity if BMI ≥30
 
 SOLUTION:
+"""
 
 # input number of testcases
 t = int(input())

@@ -1,0 +1,30 @@
+Day 65 coding Statement : New Tablet
+
+# input the number of test cases
+t = int(input())
+
+for i in range(t):
+    # to store the maximum area of the tablet
+    maxi = 0
+    # flag to check if a suitable tablet is found
+    found = False
+    
+    for j in range(n):
+        # w = width of the tablet
+        # h = height of the tablet
+        # p = price of the tablet
+        w, h, p = map(int, input().split())
+        
+        if p <= b:
+            # calculate the area of the tablet
+            area = w*h
+            # calculate the maximum area
+            maxi = max(maxi, area)
+            # mark that we found at least one suitable tablet
+            found = True
+            
+    if found:
+        print(maxi)
+    else:
+        print("No Tablet")
+            

@@ -1,0 +1,20 @@
+Day 70 coding Statement:
+Given an array, rotate the array by one position in clock-wise direction.
+
+# input size of the array
+n = int(input())
+
+# input elements into array
+array = []
+for i in range(n):
+    array.append(int(input()))
+    
+# Reverse the entire array
+array = array[::-1]
+# Reverse the first element (previously the last)
+array[:1] = array[:1][::-1]
+# Reverse the remaining elements
+array[1:] = array[1:][::-1]
+
+# Rotated array
+print(array)

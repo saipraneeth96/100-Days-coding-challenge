@@ -10,9 +10,7 @@ N = 5
 
 A[] = {1, 2, 3, 4, 5}
 
-Output:
-
-5 1 2 3 4
+Output: 5 1 2 3 4
 
 Example 2:
 
@@ -22,9 +20,7 @@ N = 8
 
 A[] = {9, 8, 7, 6, 4, 2, 1, 3}
 
-Output:
-
-3 9 8 7 6 4 2 1
+Output: 3 9 8 7 6 4 2 1
 """
 
 # input size of the array

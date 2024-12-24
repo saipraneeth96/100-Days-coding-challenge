@@ -1,0 +1,44 @@
+Day 72 coding Statement:
+In this problem, you will have to implement a simple editor. The editor maintains the content of a string S and have two following functions:
+
+# Function to process queries
+def process_queries(queries):
+    # Initialize the string S
+    S = ""
+    
+    # Results for '? i len' queries
+    results = []
+
+    # Process each query
+    for query in queries:
+        parts = query.split()
+        
+        if parts[0] == '+':
+            # Extract the parameters for the `+` query
+            i = int(parts[1])  # Position
+            x = parts[2]       # String to insert
+            
+            # Insert x at the i-th position (1-indexed)
+            S = S[:i] + x + S[i:]
+        
+        elif parts[0] == '?':
+            # Extract the parameters for the `?` query
+            i = int(parts[1])  # Start position
+            length = int(parts[2])  # Length of the substring
+            
+            # Extract the substring (1-indexed)
+            result = S[i-1:i-1+length]
+            results.append(result)
+
+    return results
+
+
+
+# Input reading
+Q = int(input())
+queries = [input().strip() for i in range(Q)]
+
+# Process queries and output results
+results = process_queries(queries)
+for res in results:
+    print(res)

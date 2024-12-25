@@ -1,0 +1,56 @@
+Day 73 coding Statement: Boring String
+
+def find_longest_boring_substring(T, test_cases):
+    results = []
+    
+    for t in range(T):
+        N, S = test_cases[t]
+        
+        # Dictionary to store counts of boring substrings
+        boring_count = {}
+        
+        max_length = 0
+        
+        # Traverse the string to identify boring substrings
+        i = 0
+        while i < N:
+            j = i
+            # Find a sequence of identical characters
+            while j < N and S[j] == S[i]:
+                j += 1
+            length = j - i
+            
+            # Add all substrings of this length to the dictionary
+            for l in range(1, length + 1):
+                substring = S[i:i + l]
+                if substring in boring_count:
+                    boring_count[substring] += 1
+                else:
+                    boring_count[substring] = 1
+                
+                # Check if the substring occurs more than once
+                if boring_count[substring] > 1:
+                    max_length = max(max_length, l)
+            
+            # Move to the next unique character sequence
+            i = j
+        
+        results.append(max_length)
+    
+    return results
+
+
+# Input Reading and Processing
+T = int(input())
+test_cases = []
+for _ in range(T):
+    N = int(input())
+    S = input()
+    test_cases.append((N, S))
+
+# Finding Results
+results = find_longest_boring_substring(T, test_cases)
+
+# Output Results
+for res in results:
+    print(res)

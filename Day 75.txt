@@ -1,0 +1,26 @@
+Day 75 coding Statement: Candy Problem
+
+def candy(n, k):
+    # no bites are needed.
+    if n == 0:
+        return 0
+    # you cannot eat the candy completely since the remaining part would be smaller than 𝐾
+    elif k == 0 or n % k != 0:
+        return -1
+    # the number of bites required 
+    else:
+        return n//k
+        
+
+# input number of trst cases
+t = int(input())
+
+for i in range(t):
+    # N = length of candy
+    # K = length of candy you can eat
+    N, K = map(int, input().split())
+    
+    result = candy(N, K)
+    
+    # print the result
+    print(result)

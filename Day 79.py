@@ -1,3 +1,4 @@
+"""
 Day 79 coding Statement : 
 
 You are given a binary string S of length N. You can perform the following operation on S:
@@ -10,6 +11,45 @@ If we pick the indices {1,3,6}, then after flipping the values at picked indices
 Note that we cannot pick the set {2,3,5} since 2 and 3 are adjacent indices.
 
 Find the minimum number of operations required to convert all the characters of S to 0.
+
+Input Format
+
+The first line contains a single integer T - the number of test cases. Then the test cases follow.
+The first line of each test case contains an integer N - the length of the binary string S.
+The second line of each test case contains a binary string S of length N.
+Output Format
+
+For each test case, output the minimum number of operations required to convert all the characters of S to 0.
+
+ 
+
+Sample Input
+
+3
+
+6
+
+101001
+
+5
+
+00000
+
+3
+
+111
+
+ 
+
+Sample Output
+
+1
+
+0
+
+2
+
+"""
 
 def attempts(n, s):
     # travese the string

@@ -17,11 +17,10 @@ Input Format
 The first line contains a single integer T - the number of test cases. Then the test cases follow.
 The first line of each test case contains an integer N - the length of the binary string S.
 The second line of each test case contains a binary string S of length N.
+
 Output Format
 
 For each test case, output the minimum number of operations required to convert all the characters of S to 0.
-
- 
 
 Sample Input
 

@@ -17,38 +17,24 @@ For each test case, output on a new line, YES, if it is possible that Alice and 
 
 You may print each character in uppercase or lowercase. For example, the strings YES, yes, Yes, and yES are considered identical.
 
- 
 
 Sample Input
 
 4
-
 3
-
 4 4 4
-
 4
-
 2 3 3 2
-
 4
-
 1 2 2 3
-
 6
-
 5 5 1 5 1 5
-
- 
 
 Sample Output
 
 NO
-
 YES
-
 NO
-
 YES
 
 """

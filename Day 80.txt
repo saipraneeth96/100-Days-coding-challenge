@@ -1,0 +1,40 @@
+Day 80 coding Statement : 
+
+Alice and Bob went to a pet store. There are N animals in the store where the ith animal is of type Ai?.
+
+Alice decides to buy some of these N animals. Bob decides that he will buy all the animals left in the store after Alice has made the purchase.
+
+Find out whether it is possible that Alice and Bob end up with exactly same multiset of animals.
+
+def multiset(n, nums):
+    # dictionary to store count of each animal type
+    freq = {}
+    
+    for i in range(n):
+        if nums[i] in freq:
+            freq[nums[i]] += 1
+        else:
+            freq[nums[i]] = 1
+            
+    for key, value in freq.items():
+        if value % 2 != 0:
+            return "NO"
+            
+            
+    return "YES"        
+
+
+# input number of test cases
+t = int(input())
+
+for i in range(t):
+    # input number of animals in the store
+    N = int(input())
+    
+    # input type of animal
+    animals = list(map(int, input().split()))
+    
+    result = multiset(N, animals)
+    
+    # print the output
+    print(result)

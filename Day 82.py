@@ -15,30 +15,22 @@ The first line of each test case contains N - the number of strings and length o
 Each of the next N lines contains a binary string of length N.
 Output Format
 
-For each test case, print on one line a binary string of length N, which is different from all of the given strings. If there are multiple possible answers, print any.
-
- 
+For each test case, print on one line a binary string of length N, which is different from all of the given strings.
+If there are multiple possible answers, print any.
 
 Sample Input
 
 2
 
 3
-
 101
-
 110
-
 100
 
 4
-
 1100
-
 1010
-
 0100
-
 0010
 
  

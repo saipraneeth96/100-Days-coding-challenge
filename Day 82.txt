@@ -1,0 +1,37 @@
+Day 82 coding Statement : 
+
+You are given N binary strings of length N each. You need to find a binary string of length N which is different from all of the given strings.
+
+
+
+def binaryString(n, strings):
+    # list to store binary strings of length N that can be constructed and are not in input
+    missedOut = []
+    
+    for i in range(n):
+        if strings[i][i] == '0':
+            missedOut.append('1')
+        else:
+            missedOut.append('0')
+            
+    return missedOut        
+
+# input numbner of test cases
+t = int(input())
+
+for i in range(t):
+    # input N binary string of length N
+    N = int(input())
+    
+    # input strings of length N into an lsit
+    strings = []
+    
+    for j in range(N):
+        strings.append(input())
+        
+    results = binaryString(N, strings)
+    
+    # display the output
+    print(''.join(results))
+    
+    

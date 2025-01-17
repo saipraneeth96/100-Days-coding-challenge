@@ -1,0 +1,70 @@
+Day 94 coding Statement : 
+
+Kekocity's population consist of N gnomes numbered with unique ids from 1 to N. As they are very joyful gnomes, they usually send jokes to their friends right after they get any (even if they knew it before) via their social network named as Mybeard. Mybeard became popular in the city because of message auto-deletion. It takes exactly one minute to read and resend joke to mates.
+
+Mayor of Kekocity, Mr. Shaikhinidin, is interested in understanding how the jokes are spread. He gives you database of Mybeard social network, and wants you to answer some queries on it.
+
+You will be given a list of friends for every gnome and M queries of the following type: Who will receive a message with joke after exactly K minutes, if the creator of joke was gnome with id x?
+
+
+
+import numpy as np
+
+def matrix_exponentiation(mat, k, n):
+    """Exponentiate the matrix `mat` to the power `k`."""
+    result = np.eye(n, dtype=int)  # Identity matrix
+    base = np.array(mat)
+    
+    while k > 0:
+        if k % 2 == 1:
+            result = (result @ base) > 0  # Binary multiplication, boolean result
+        base = (base @ base) > 0
+        k //= 2
+    
+    return result.astype(int)
+
+def solve():
+    import sys
+    input = sys.stdin.read
+    data = input().split()
+    
+    idx = 0
+    N = int(data[idx])
+    idx += 1
+    
+    # Read adjacency matrix
+    g = []
+    for _ in range(N):
+        g.append(list(map(int, data[idx:idx + N])))
+        idx += N
+    
+    M = int(data[idx])
+    idx += 1
+    
+    queries = []
+    for _ in range(M):
+        k, x = map(int, data[idx:idx + 2])
+        queries.append((k, x))
+        idx += 2
+    
+    # Process each query
+    results = []
+    for k, x in queries:
+        if k == 0:  # Only the source gnome knows the joke
+            results.append(f"1\n{x}")
+            continue
+        
+        # Matrix exponentiation
+        g_k = matrix_exponentiation(g, k, N)
+        
+        # Extract the row for gnome `x - 1` (0-indexed)
+        row = g_k[x - 1]
+        gnomes = [i + 1 for i in range(N) if row[i] > 0]
+        
+        if gnomes:
+            results.append(f"{len(gnomes)}\n{' '.join(map(str, gnomes))}")
+        else:
+            results.append("0\n-1")
+    
+    # Print all results
+    sys.stdout.write("\n".join(results) + "\n")

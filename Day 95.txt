@@ -1,0 +1,26 @@
+Day 95 coding Statement : 
+
+Kulyash is given an integer N. His task is to break N into some number of (integer) powers of 2.
+
+To achieve this, he can perform the following operation several times (possibly, zero):
+
+Choose an integer X which he already has, and break X into 2 integer parts (Y and Z) such that X=Y+Z.
+Find the minimum number of operations required by Kulyash to accomplish his task.
+
+
+
+def min_operations_to_powers_of_2(N):
+    # Count the number of 1's in binary representation of N
+    num_of_ones = bin(N).count('1')
+    # Minimum operations is number of 1's - 1
+    return num_of_ones - 1
+
+# Input reading
+T = int(input("Enter number of test cases: "))
+
+for i in range(T):
+    N = int(input("Enter N: "))
+
+    # Process and Output
+    results = min_operations_to_powers_of_2(N)
+    print(results)

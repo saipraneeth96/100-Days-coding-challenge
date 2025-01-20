@@ -1,0 +1,66 @@
+Day 97 coding Statement : 
+
+Arun has a rooted tree of N vertices rooted at vertex 1. Each vertex can either be coloured black or white.
+
+Initially, the vertices are coloured A1?,A2?,…AN?, where Ai? ∈ {0,1} denotes the colour of the i-th vertex (here 0 represents white and 1 represents black). He wants to perform some operations to change the colouring of the vertices to B1?,B2?,…BN? respectively.
+
+Arun can perform the following operation any number of times. In one operation, he can choose any subtree and either paint all its vertices white or all its vertices black.
+
+Help Arun find the minimum number of operations required to change the colouring of the vertices to B1?,B2?,…BN? respectively.
+
+
+
+from collections import defaultdict
+import sys
+sys.setrecursionlimit(100000)
+
+def dfs(node, parent, adj, A, B, visited):
+    # Base case: initialize operation count for this subtree
+    operations = 0
+    
+    # Check if the current node's color matches the desired color
+    if A[node] != B[node]:
+        operations += 1  # Change the subtree's color
+        A[node] = B[node]  # Simulate painting the subtree
+    
+    # Mark this node as visited
+    visited[node] = True
+    
+    # Traverse all child nodes
+    for neighbor in adj[node]:
+        if neighbor != parent and not visited[neighbor]:
+            operations += dfs(neighbor, node, adj, A, B, visited)
+    
+    return operations
+
+def solve():
+    T = int(input())  # Number of test cases
+    results = []
+    
+    for _ in range(T):
+        N = int(input())  # Number of vertices
+        
+        # Initial coloring
+        A = list(map(int, input().split()))
+        
+        # Desired coloring
+        B = list(map(int, input().split()))
+        
+        # Build the adjacency list for the tree
+        adj = defaultdict(list)
+        for __ in range(N - 1):
+            u, v = map(int, input().split())
+            adj[u].append(v)
+            adj[v].append(u)
+        
+        # Create a visited array to track visited nodes
+        visited = [False] * (N + 1)
+        
+        # Run DFS starting from the root node (node 1)
+        result = dfs(1, -1, adj, [0] + A, [0] + B, visited)
+        results.append(result)
+    
+    # Output results for all test cases
+    for res in results:
+        print(res)
+
